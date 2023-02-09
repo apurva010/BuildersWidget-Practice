@@ -6,12 +6,9 @@ class BuilderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appbar
       appBar: AppBar(
         title: const Text('Why Builder Require'),
       ),
-
-      // detect gesture
       body: Center(
         child: Builder(
           //If used without Builder It will give error because it use same context as scaffold and scaffold not created yet
@@ -19,8 +16,6 @@ class BuilderWidget extends StatelessWidget {
             onTap: () {
               Scaffold.of(context).showBodyScrim(true, 0.1);
             },
-
-            // box styling
             child: Container(
               margin: const EdgeInsets.all(18),
               height: 40,
